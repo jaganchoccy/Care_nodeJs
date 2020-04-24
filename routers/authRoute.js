@@ -5,7 +5,8 @@ const PatientController = require('../controllers/patient.controller')
 
 const {token} = require('../middleware/middle'); 
 
-router.post('/dbs/PatientVitals/colls/CaliberBBContainer',token,PatientController.getPatient)
+router.post('/dbs/PatientVitals/colls/CaliberBBContainer',token,PatientController.getPatientById);
+router.post('/dbs/PatientVitals/colls/PatientInfo',token,PatientController.getPatientInfo);
 router.post('/signUp', authController.signUp);
 router.post('/signIn', SignInController.signIn);
 router.post('/facebookSignIn', SignInController.facebookSignIn);

@@ -31,6 +31,7 @@ app.use(bodyParser.json({ limit: '50mb', extended: true }));
 // Web Application route
 const Auth = require('./routers/authRoute');
 
+
 // Web Application route use
 app.use('/Care', Auth);
 
@@ -40,13 +41,6 @@ app.get('/', (req, res) => {
   res.json({"message": "default router"});
 });
 
-
-//Default Route
-app.use((req, res, next) => {
-    const error = new Error('Not Found');
-    error.status = 404;
-    next(error);
-});
 
 app.use((error, req, res, next) => {
     res.status(error.status || 500);
