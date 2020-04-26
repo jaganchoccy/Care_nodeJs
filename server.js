@@ -11,7 +11,7 @@ const morgan = require('morgan');
 
 
 //cross-orgin
-var clientPort = ['http://localhost:4200','*']//
+var clientPort = ['https://bbproviderwebapp.azurewebsites.net','*']//
 var corsOptions = {
   origin: function (origin, callback) {
     if (clientPort.indexOf(origin) !== -1) {
@@ -40,6 +40,7 @@ app.use('/Care', Auth);
 app.get('/', (req, res) => {
   res.json({"message": "default router"});
 });
+
 
 
 app.use((error, req, res, next) => {
