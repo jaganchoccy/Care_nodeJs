@@ -95,7 +95,7 @@ exports.addNewPatient =(req, res, next) => {
     const newPatient = req.body.newData;
     console.log('getnew patientDetail',req.body.newData)
     const endpoint = "https://caliberbbcosmosdb.documents.azure.com:443";
-    const key = "3JAg0hr4srXHQVpBo2drGDqljqtfB2gEiSAUKx4UyWYmm1WBYZRkJH9qK77oZnanMW7we3BmO4NwWIWau76gaA==";
+    const key = "hHrQ9KFP7B2eNaFU4C4qYWi5e2zsYF0Ul8GDJz50AZYs2eTUdF8VHgYoFEBXksGRG9BBYXr95d8V18ApcjvJGg==";
     const client = new CosmosClient({ endpoint, key });
 
     async function main() {
