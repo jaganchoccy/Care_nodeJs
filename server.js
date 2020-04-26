@@ -11,7 +11,7 @@ const morgan = require('morgan');
 
 
 //cross-orgin
-var clientPort = ['https://bbproviderwebapp.azurewebsites.net','*']//
+var clientPort = ['https://caliberproviderwebapp.azurewebsites.net','*']//
 var corsOptions = {
   origin: function (origin, callback) {
     if (clientPort.indexOf(origin) !== -1) {
