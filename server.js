@@ -7,9 +7,6 @@ const port = process.env.PORT || 6200;
 const bodyParser = require('body-parser');
 const server = require('http').Server(app);
 const morgan = require('morgan');
-
-
-
 //cross-orgin
 var clientPort = ['https://caliberproviderwebapp.azurewebsites.net','*']//
 var corsOptions = {
